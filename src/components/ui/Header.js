@@ -56,6 +56,17 @@ const useStyles = makeStyles((theme) => ({
 
     height: "45px",
   },
+  menu: {
+    backgroundColor: theme.palette.common.blue,
+    color: "white",
+  },
+  menuItem: {
+    ...theme.typography.tab,
+    opacity: 0.7,
+    "&:hover": {
+      opacity: 1,
+    },
+  },
 }));
 
 function Header(props) {
@@ -63,6 +74,8 @@ function Header(props) {
   const [value, setValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   const handleChange = (e, value) => {
     setValue(value);
   };
@@ -74,6 +87,18 @@ function Header(props) {
     setAnchorEl(null);
     setOpen(false);
   };
+
+  const handleMenuItemClick = (e, i) => {
+    setAnchorEl(null);
+    setOpen(false);
+    setSelectedIndex(i);
+  };
+  const menuOptions = [
+    { name: "Services", link: "/services" },
+    { name: "custom Software Development", link: "/customsoftware" },
+    { name: "mobile app development", link: "/mobileapps" },
+    { name: "web site develpment", link: "/websites" },
+  ];
 
   useEffect(() => {
     // タブが選択された状態でF5すると、タブの選択状態がクリアされてしまうことへの対処
@@ -89,6 +114,60 @@ function Header(props) {
       setValue(4);
     } else if (window.location.pathname === "/estimate" && value !== 5) {
       setValue(5);
+    }
+
+    switch (window.location.pathname) {
+      case "/":
+        if (value !== 0) {
+          setValue(0);
+        }
+        break;
+      case "/services":
+        if (value !== 1) {
+          setValue(1);
+          setSelectedIndex(0);
+        }
+        break;
+      case "/customsoftware":
+        if (value !== 1) {
+          setValue(1);
+          setSelectedIndex(1);
+        }
+        break;
+      case "/mobileapps":
+        if (value !== 1) {
+          setValue(1);
+          setSelectedIndex(2);
+        }
+        break;
+      case "/websites":
+        if (value !== 1) {
+          setValue(1);
+          setSelectedIndex(3);
+        }
+        break;
+      case "/revolution":
+        if (value !== 2) {
+          setValue(2);
+        }
+        break;
+      case "/about":
+        if (value !== 3) {
+          setValue(3);
+        }
+        break;
+      case "/contact":
+        if (value !== 4) {
+          setValue(4);
+        }
+        break;
+      case "/estimate":
+        if (value !== 5) {
+          setValue(5);
+        }
+        break;
+      default:
+        break;
     }
   }, [value]);
   return (
@@ -160,8 +239,37 @@ function Header(props) {
               anchorEl={anchorEl}
               open={open}
               onClose={handleClose}
+              classes={{ paper: classes.menu }}
               MenuListProps={{ onMouseLeave: handleClose }}
+              elevation={0}
             >
+              {menuOptions.map((option, i) => (
+                <MenuItem
+                  key={option}
+                  component={Link}
+                  to={option.link}
+                  classes={{ root: classes.menuItem }}
+                  onClick={(e) => {
+                    handleMenuItemClick(e, i);
+                    setValue(1);
+                    handleClose();
+                  }}
+                  selected={i === selectedIndex && value === 1}
+                >
+                  {option.name}
+                </MenuItem>
+              ))}
+              {/* <MenuItem
+                onClick={() => {
+                  handleClose();
+                  setValue(1);
+                }}
+                component={Link}
+                to="services"
+                classes={{ root: classes.menuItem }}
+              >
+                Services
+              </MenuItem>
               <MenuItem
                 onClick={() => {
                   handleClose();
@@ -169,6 +277,7 @@ function Header(props) {
                 }}
                 component={Link}
                 to="customsoftware"
+                classes={{ root: classes.menuItem }}
               >
                 Custom Software Development
               </MenuItem>
@@ -179,6 +288,7 @@ function Header(props) {
                 }}
                 component={Link}
                 to="mobileapps"
+                classes={{ root: classes.menuItem }}
               >
                 Mobile App Development
               </MenuItem>
@@ -189,9 +299,10 @@ function Header(props) {
                 }}
                 component={Link}
                 to="websites"
+                classes={{ root: classes.menuItem }}
               >
                 Website Development
-              </MenuItem>
+              </MenuItem> */}
             </Menu>
           </Toolbar>
         </AppBar>
