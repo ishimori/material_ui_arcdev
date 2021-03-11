@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/material_ui_arcdev/static/js/main.c0d23b58.chunk.js",
-    "main.js.map": "/material_ui_arcdev/static/js/main.c0d23b58.chunk.js.map",
+    "main.js": "/material_ui_arcdev/static/js/main.acc4dfcd.chunk.js",
+    "main.js.map": "/material_ui_arcdev/static/js/main.acc4dfcd.chunk.js.map",
     "runtime-main.js": "/material_ui_arcdev/static/js/runtime-main.b1ec25ae.js",
     "runtime-main.js.map": "/material_ui_arcdev/static/js/runtime-main.b1ec25ae.js.map",
-    "static/js/2.4f8360a1.chunk.js": "/material_ui_arcdev/static/js/2.4f8360a1.chunk.js",
-    "static/js/2.4f8360a1.chunk.js.map": "/material_ui_arcdev/static/js/2.4f8360a1.chunk.js.map",
+    "static/js/2.fac3add2.chunk.js": "/material_ui_arcdev/static/js/2.fac3add2.chunk.js",
+    "static/js/2.fac3add2.chunk.js.map": "/material_ui_arcdev/static/js/2.fac3add2.chunk.js.map",
     "index.html": "/material_ui_arcdev/index.html",
-    "static/js/2.4f8360a1.chunk.js.LICENSE.txt": "/material_ui_arcdev/static/js/2.4f8360a1.chunk.js.LICENSE.txt",
+    "static/js/2.fac3add2.chunk.js.LICENSE.txt": "/material_ui_arcdev/static/js/2.fac3add2.chunk.js.LICENSE.txt",
     "static/media/logo.c61e03c8.svg": "/material_ui_arcdev/static/media/logo.c61e03c8.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b1ec25ae.js",
-    "static/js/2.4f8360a1.chunk.js",
-    "static/js/main.c0d23b58.chunk.js"
+    "static/js/2.fac3add2.chunk.js",
+    "static/js/main.acc4dfcd.chunk.js"
   ]
 }
