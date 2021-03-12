@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/material_ui_arcdev/static/js/main.13f31565.chunk.js",
-    "main.js.map": "/material_ui_arcdev/static/js/main.13f31565.chunk.js.map",
+    "main.js": "/material_ui_arcdev/static/js/main.6da52d53.chunk.js",
+    "main.js.map": "/material_ui_arcdev/static/js/main.6da52d53.chunk.js.map",
     "runtime-main.js": "/material_ui_arcdev/static/js/runtime-main.b1ec25ae.js",
     "runtime-main.js.map": "/material_ui_arcdev/static/js/runtime-main.b1ec25ae.js.map",
     "static/js/2.701d36b3.chunk.js": "/material_ui_arcdev/static/js/2.701d36b3.chunk.js",
@@ -13,6 +13,6 @@
   "entrypoints": [
     "static/js/runtime-main.b1ec25ae.js",
     "static/js/2.701d36b3.chunk.js",
-    "static/js/main.13f31565.chunk.js"
+    "static/js/main.6da52d53.chunk.js"
   ]
 }
